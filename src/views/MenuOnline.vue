@@ -4418,7 +4418,58 @@ font-size: 11px;
 .mobile-bottom-bar .cart-icon-wrap i {
   color: inherit;
 }
+ /* Modal chiếm gần full màn */
+  .modal-card.modal-wide {
+    width: 94vw;
+    max-height: 88vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
+  /* ĐỔI LAYOUT: 1 CỘT */
+  .modal-content {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* ===== ẢNH ===== */
+  .modal-left {
+    flex: 0 0 auto;
+    background: #000; /* nền đen cho ảnh nổi */
+  }
+
+  .modal-left .modal-img {
+    width: 100%;
+    height: 32vh;          /* 👈 QUAN TRỌNG */
+    max-height: 260px;     /* không cao quá */
+    object-fit: contain;   /* KHÔNG CẮT ẢNH */
+    background: #000;
+  }
+
+  /* ===== NỘI DUNG ===== */
+  .modal-right {
+    flex: 1;
+    overflow-y: auto;      /* 👈 scroll ở đây */
+    padding: 14px 14px 18px;
+  }
+
+  /* Giá + tên gọn lại */
+  .modal-title {
+    font-size: 17px;
+  }
+
+  .modal-price {
+    font-size: 20px;
+  }
+
+  /* Fix nút add không bị đẩy ra ngoài */
+  .modal-right .add-btn {
+    margin-top: 10px;
+    position: sticky;
+    bottom: 0;
+  }
 /* BADGE */
 .cart-badge {
   position: absolute;
